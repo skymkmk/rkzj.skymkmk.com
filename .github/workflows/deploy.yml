@@ -1,0 +1,24 @@
+name: Publish to Website
+on: push
+jobs:
+  build-and-deploy:
+    name: Build and Deploy 🛠️
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout 🧑‍💻
+      uses: actions/checkout@v3.1.0
+    - name: Download Dependency & Build 🔨
+      run: |
+        yarn
+        yarn build
+    - name: Deploy 🌐
+      uses: easingthemes/ssh-deploy@v3.0.1
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        ARGS: "-rltgoDzvO --delete"
+        SOURCE: "dist/"
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
+        TARGET: ${{ secrets.REMOTE_TARGET }}
+        EXCLUDE: "/dist/, /node_modules/"
