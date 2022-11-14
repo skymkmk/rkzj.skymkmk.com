@@ -7,15 +7,14 @@ const Sidebar = () => {
   const current = useAppSelector(state => state.currentData.currentIndex);
   const dispatch = useAppDispatch();
   const list = data.map((value, index) => (
-    <div className={`p-2 ${index === current ? 'border-yellow-300 bg-yellow-50 border rounded' : ''}`}>
+    <div className={`p-2 ${index === current ? "border-yellow-300 bg-yellow-50 border rounded" : ""}`} key={uuidv4()}>
       <a
-      key={uuidv4()}
-      onClick={() => {
-        dispatch(updateCurrentIndex(index));
-      }}
-      className={`block ${index === current ? 'text-yellow-900 no-underline' : ''}`}>
-      {value.name}
-    </a>
+        onClick={() => {
+          dispatch(updateCurrentIndex(index));
+        }}
+        className={`block ${index === current ? "text-yellow-900 no-underline" : ""}`}>
+        {value.name}
+      </a>
     </div>
   ));
 

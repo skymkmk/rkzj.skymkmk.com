@@ -8,8 +8,8 @@ const Content = () => {
   const [imgURL, setImgURL] = useState("图片加载中");
   const [content, setContent] = useState(
     <>
-      <p>欢迎来到根瘤菌的主页！请点击左方（电脑端）或左上角按钮（手机端）来访问你想下载的模型。</p>
-      <div className="w-full p-2 bg-cyan-100 mt-4 border border-cyan-500 rounded text-cyan-900">
+      <p>欢迎来到根瘤菌rkzj的主页！请点击左方导航栏（电脑端）或左上角按钮（手机端）来访问你想下载的模型。</p>
+      <div className="w-full p-2 bg-cyan-100 mt-4 border border-cyan-500 rounded text-cyan-900 mb-4">
         <div className="flex">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
@@ -39,7 +39,7 @@ const Content = () => {
       const url = result !== null ? result[2] : null;
       if (url === "null" || url === "undefined" || url === null) setImgURL("图片加载中");
       setContent(
-        <article>
+        <article className="mb-4">
           {imgURL !== "图片加载中" && imgURL !== "图片加载失败" ? (
             <img src={`https://api.skymkmk.com/hdslb/${url}`} alt={`${data[currentIndex].name}`} className="rounded-md shadow-md mb-2"></img>
           ) : (
@@ -81,6 +81,9 @@ const Content = () => {
         <p>请遵循根瘤菌rkzj的声明许可，严禁将模型用于用于商业盈利用途、直播、二次传播、修改作者信息重发布。</p>
       </div>
       {content}
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9917610262791684" crossOrigin="anonymous"></script>
+      <ins className="adsbygoogle" style={{ display: "block", textAlign: "center" }} data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9917610262791684" data-ad-slot="7605007407"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
   );
 };
