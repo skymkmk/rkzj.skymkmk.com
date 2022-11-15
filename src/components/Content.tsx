@@ -71,7 +71,7 @@ const Content = () => {
     }
   }, [currentIndex, imgURL]);
   return (
-    <div className="col-span-2 lg:col-span-3 xl:col-span-4">
+    <div className="col-span-2 lg:col-span-3 2xl:col-span-4 mr-4">
       <div className="text-red-900 border border-red-500 rounded bg-red-100 p-2 mb-4">
         <div className="flex">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -82,7 +82,7 @@ const Content = () => {
         <p>请遵循根瘤菌rkzj的声明许可，严禁将模型用于用于商业盈利用途、直播、二次传播、修改作者信息重发布。</p>
       </div>
         {content}
-        <Ads></Ads>
+        <Ads classnames="xl:hidden"></Ads>
     </div>
   );
 };
