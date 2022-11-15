@@ -21,7 +21,7 @@ const Header = () => {
     );
   }, [navOption]);
   return (
-    <header className="sticky top-0 border-b">
+    <header className="sticky top-0 border-b z-10">
       <nav className="bg-white p-4 font-noto font-bold border-b md:border-none">
         <div className="container mx-auto flex justify-between items-center">
           <span className="flex items-center">
