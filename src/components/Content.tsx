@@ -71,7 +71,7 @@ const Content = () => {
     }
   }, [currentIndex, imgURL]);
   return (
-    <div className="col-span-2 lg:col-span-3 2xl:col-span-4 mr-4">
+    <div className="col-span-2 lg:col-span-3 2xl:col-span-4 xl:mr-4">
       <div className="text-red-900 border border-red-500 rounded bg-red-100 p-2 mb-4">
         <div className="flex">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
