@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useAppSelector } from "../app/hooks";
 import axios from "axios";
 import data from "../../data.json";
+import Ads from "./Ads";
 
 const Content = () => {
   const currentIndex = useAppSelector(state => state.currentData.currentIndex);
@@ -81,7 +82,7 @@ const Content = () => {
         <p>请遵循根瘤菌rkzj的声明许可，严禁将模型用于用于商业盈利用途、直播、二次传播、修改作者信息重发布。</p>
       </div>
         {content}
-        <ins className="adsbygoogle" style={{ display: "block", textAlign: "center" }} data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9917610262791684" data-ad-slot="7605007407"></ins>
+        <Ads></Ads>
     </div>
   );
 };
