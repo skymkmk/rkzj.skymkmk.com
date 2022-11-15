@@ -80,10 +80,8 @@ const Content = () => {
         </div>
         <p>请遵循根瘤菌rkzj的声明许可，严禁将模型用于用于商业盈利用途、直播、二次传播、修改作者信息重发布。</p>
       </div>
-      {content}
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9917610262791684" crossOrigin="anonymous"></script>
-      <ins className="adsbygoogle" style={{ display: "block", textAlign: "center" }} data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9917610262791684" data-ad-slot="7605007407"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        {content}
+        <ins className="adsbygoogle" style={{ display: "block", textAlign: "center" }} data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9917610262791684" data-ad-slot="7605007407"></ins>
     </div>
   );
 };
