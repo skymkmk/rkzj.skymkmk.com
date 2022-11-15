@@ -82,7 +82,7 @@ const Content = () => {
         <p>请遵循根瘤菌rkzj的声明许可，严禁将模型用于用于商业盈利用途、直播、二次传播、修改作者信息重发布。</p>
       </div>
         {content}
-        <Ads classnames="xl:hidden"></Ads>
+        <Ads classnames="xl:hidden block"></Ads>
     </div>
   );
 };

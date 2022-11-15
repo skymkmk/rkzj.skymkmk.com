@@ -11,7 +11,7 @@ function App() {
         <div className="md:grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           <Sidebar></Sidebar>
           <Content></Content>
-          <Ads classnames="hidden xl:col-span-1"></Ads>
+          <Ads classnames="hidden xl:block xl:col-span-1"></Ads>
         </div>
       </main>
     </>
