@@ -1,7 +1,7 @@
 name: Publish to Website
 on: 
   schedule:
-    - cron: '22 15 17 11 *'
+    - cron: '0 9 18 11 *'
 jobs:
   build-and-deploy:
     name: Build and Deploy 🛠️
