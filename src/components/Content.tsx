@@ -4,6 +4,11 @@ import axios from "axios";
 import data from "../../data.json";
 import Ads from "./Ads";
 
+interface downloadURL {
+  name: string;
+  URL: string;
+}
+
 const Content = () => {
   const currentIndex = useAppSelector(state => state.currentData.currentIndex);
   const [imgURL, setImgURL] = useState("图片加载中");
@@ -52,9 +57,22 @@ const Content = () => {
           <a href={`https://www.bilibili.com/${data[currentIndex].BV}`} target="_blank" rel="noopener noreferrer" className="mr-2">
             视频链接
           </a>
-          <a href={`${data[currentIndex].downloadURL}`} target="_blank" rel="noopener noreferrer">
+          {/* <a href={`${data[currentIndex].downloadURL}`} target="_blank" rel="noopener noreferrer">
             下载地址
-          </a>
+          </a> */}
+          {data[currentIndex].downloadURL instanceof Array ? (
+            (data[currentIndex].downloadURL as Array<downloadURL>).map(value => {
+              return (
+                <a href={`${value.URL}`} className="mr-2 inline-block" target="_blank" rel="noopener noreferrer">
+                  {value.name}
+                </a>
+              );
+            })
+          ) : (
+            <a href={`${data[currentIndex].downloadURL}`} target="_blank" rel="noopener noreferrer">
+              下载地址
+            </a>
+          )}
           {data[currentIndex].notice !== undefined ? (
             <div className="w-full p-2 bg-lime-100 mt-4 border border-lime-500 rounded text-lime-900">
               <div className="flex">
@@ -81,8 +99,8 @@ const Content = () => {
         </div>
         <p>请遵循根瘤菌rkzj的声明许可，严禁将模型用于用于商业盈利用途、直播、二次传播、修改作者信息重发布。</p>
       </div>
-        {content}
-        <Ads classnames="xl:hidden block"></Ads>
+      {content}
+      <Ads classnames="xl:hidden block"></Ads>
     </div>
   );
 };

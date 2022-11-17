@@ -6,7 +6,7 @@ const Ads = ({classnames} : {classnames ?: string}) => {
     try {
       adsbygoogle.push({});
     } catch (e) {}
-  });
+  }, []);
   return <ins className={`adsbygoogle ${classnames !== undefined ? classnames : ''}`} style={{ textAlign: "center" }} data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9917610262791684" data-ad-slot="7605007407"></ins>;
 };
 
