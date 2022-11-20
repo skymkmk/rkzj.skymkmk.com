@@ -12,6 +12,8 @@ const Nav = () => {
   useEffect(() => {
     if (currentIndex !== -1) {
       setCurrent(data[currentIndex].name);
+    } else if (currentIndex === -1) {
+      setCurrent("请选择模型");
     }
   }, [currentIndex]);
   const list = data.map((value, index) => (
@@ -22,8 +24,7 @@ const Nav = () => {
         setCurrent(value.name);
         dispatch(updateCurrentIndex(index));
       }}
-      className="block py-4"
-      >
+      className="block py-4">
       {value.name}
     </a>
   ));
@@ -36,7 +37,7 @@ const Nav = () => {
         {current}
       </nav>
       <div className="relative">
-        <div className={`md:hidden absolute h-96 overflow-auto top-px px-4 border-b w-full divide-y transition ${showLink ? '' : '-translate-y-full'} bg-white -z-10 duration-300`}>{list}</div>
+        <div className={`md:hidden absolute h-96 overflow-auto top-px px-4 border-b w-full divide-y transition ${showLink ? "" : "-translate-y-full"} bg-white -z-10 duration-300`}>{list}</div>
       </div>
     </>
   );
