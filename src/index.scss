@@ -21,3 +21,33 @@
         }
     }
 }
+
+.notice-red {
+    @apply bg-red-100;
+    @apply border-red-500;
+    @apply text-red-900;
+}
+
+.notice-yellow {
+    @apply bg-yellow-100;
+    @apply border-yellow-500;
+    @apply text-yellow-900;
+}
+
+.notice-lime {
+    @apply bg-lime-100;
+    @apply border-lime-500;
+    @apply text-lime-900;
+}
+
+.notice-cyan {
+    @apply bg-cyan-100;
+    @apply border-cyan-500;
+    @apply text-cyan-900;
+}
+
+.notice-fuchsia {
+    @apply bg-fuchsia-100;
+    @apply border-fuchsia-500;
+    @apply text-fuchsia-900;
+}

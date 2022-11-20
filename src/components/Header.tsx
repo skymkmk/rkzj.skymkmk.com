@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { updateCurrentIndex } from "../app/currentDataSlice";
+import { useAppDispatch } from "../app/hooks";
 import "./Header.scss";
 import Nav from "./Nav";
 
@@ -6,6 +8,7 @@ const Header = () => {
   const [navOption, setNavOption] = useState(false);
   const [optionBgAnimation, setOptionBgAnimation] = useState("");
   const [optionDisplay, setOptionDisplay] = useState("hidden");
+  const appDispatch = useAppDispatch();
   useEffect(() => {
     if (navOption) setOptionDisplay("");
     else {
@@ -24,7 +27,11 @@ const Header = () => {
     <header className="sticky top-0 border-b z-10">
       <nav className="bg-white p-4 font-noto font-bold border-b md:border-none">
         <div className="container mx-auto flex justify-between items-center">
-          <span className="flex items-center">
+          <span
+            className="flex items-center hover:cursor-pointer"
+            onClick={() => {
+              appDispatch(updateCurrentIndex(-1));
+            }}>
             <span className="h-8 w-8 avatar inline-block mr-2 rounded shadow"></span>
             <span className="text-2xl select-none">根瘤菌rkzj</span>
           </span>
